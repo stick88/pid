@@ -184,7 +184,12 @@ namespace xunxian {
         return (25000000 / (freq * chipResolution)) - 1;
     }
     //初始化扩展芯片地址：x 频率：x
-    export function init(chipAddress: number = 0x40, newFreq: number = 50) {
+    /**
+     * Get the amount of red the colour sensor sees
+     */
+    //% blockId=envirobit_get_light_color
+    //% block="init_CONTROL"
+    export function init(chipAddress: number = 0x70, newFreq: number = 1000) {
         debug(`Init chip at address ${chipAddress} to ${newFreq}Hz`)
         //const buf = pins.createBuffer(2)
         const freq = (newFreq > 1000 ? 1000 : (newFreq < 40 ? 40 : newFreq))
