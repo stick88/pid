@@ -112,7 +112,7 @@ namespace xunxian {
      /**
      * Get the amount of red the colour sensor sees
      */
-    //% blockId=envirobit_get_light_color
+    
     
     export function control_xu(): number {
         let i = gitpinstatus()
@@ -129,8 +129,7 @@ namespace xunxian {
    /**
      * Get the amount of red the colour sensor sees
      */
-    //% blockId=envirobit_get_light_color
-    //% block="CONTROL_mator"
+    //% block
     export function control_mator(left: moter_num=0, right: moter_num = 1): void {
         let num = xunxian.control_xu() * 2.3 //(xunxian.control() - 2.5) * 300 
         xunxian.setmotor(left, 32 + num)
@@ -189,7 +188,7 @@ namespace xunxian {
      * @param chipAddress The addr
     * @param newFreq The newFreq (hz))
     *  */
-    //% block="init_CONTROL"
+    //% block
     export function init(chipAddress: number = 0x70, newFreq: number = 1000) {
         debug(`Init chip at address ${chipAddress} to ${newFreq}Hz`)
         //const buf = pins.createBuffer(2)
