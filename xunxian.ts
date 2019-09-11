@@ -186,8 +186,9 @@ namespace xunxian {
     //初始化扩展芯片地址：x 频率：x
     /**
      * Get the amount of red the colour sensor sees
-     */
-    //% blockId=envirobit_get_light_color
+     * @param chipAddress The addr
+    * @param newFreq The newFreq (hz))
+    *  */
     //% block="init_CONTROL"
     export function init(chipAddress: number = 0x70, newFreq: number = 1000) {
         debug(`Init chip at address ${chipAddress} to ${newFreq}Hz`)
