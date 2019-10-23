@@ -135,6 +135,16 @@ namespace xunxian {
         xunxian.setmotor(left, 32 + num)
         xunxian.setmotor(right, 35 - num)
     }
+    /**
+     * Get the amount of red the colour sensor sees
+     */
+    //% block
+    export function control_mators(left: moter_num = 0,numl: number ,right: moter_num = 1,numr: number): void {
+        numl = Math.max(0, Math.min(100, numl))
+        numl = Math.max(0, Math.min(100, numr))
+        xunxian.setmotor(left,numl )
+        xunxian.setmotor(right,numr )
+    }
     export function setPinPulseRange(pinNumber: number, onStep: number = 0, offStep: number = 2048 ): void {
         pinNumber = Math.max(0, Math.min(15, pinNumber))
         //const buffer = pins.createBuffer(2)
